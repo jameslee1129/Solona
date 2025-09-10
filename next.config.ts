@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   // GitHub Pages configuration
   output: 'export',
   trailingSlash: true,
+  basePath: isProd ? '/Solona' : '',
+  assetPrefix: isProd ? '/Solona/' : '',
   images: {
     unoptimized: true,
   },
