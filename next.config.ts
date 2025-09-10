@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // GitHub Pages configuration
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
   // Ignorer bygg-feil i prod (Vercel) for å sikre deploy
   eslint: {
     ignoreDuringBuilds: true,
