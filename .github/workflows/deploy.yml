@@ -25,6 +25,19 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          NEXT_PUBLIC_SUPABASE_URL: ""
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ""
+          SUPABASE_SERVICE_ROLE_KEY: ""
+          NEXT_PUBLIC_SOLANA_RPC: "https://api.mainnet-beta.solana.com"
+          SOLANA_RPC_URL: "https://api.mainnet-beta.solana.com"
+          DRIFT_ENV: "mainnet"
+          DRIFT_SUBACCOUNT_ID: "1"
+          DRIFT_MIN_LAMPORTS: "50000000"
+          NEXT_PUBLIC_AGORA_APP_ID: ""
+          AGORA_APP_CERTIFICATE: ""
+          HELIUS_API_KEY: ""
+          NEXT_PUBLIC_HELIUS_API_KEY: ""
+          PRIVATE_KEY_VIEW_PASS: ""
 
       - name: Add .nojekyll file
         run: touch out/.nojekyll
