@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Force black theme always */
+html {
+  background: #000000;
+  color: #ffffff;
+}
+
+body {
+  background: #000000 !important;
+  color: #ffffff !important;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Ensure all elements inherit dark theme */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove all shadows and gloss effects */
+button {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  background-image: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Flat button styling */
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:active {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Always show pointer on interactive elements */
+button,
+[role="button"] {
+  cursor: pointer !important;
+}
+
+/* Dark scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* Hide TradingView watermark and links globally */
+.tv-lightweight-charts a[href*="tradingview"],
+.tv-lightweight-charts a[href*="TradingView"],
+.tv-lightweight-charts div[class*="watermark"],
+.tv-lightweight-charts div[class*="logo"],
+.tv-lightweight-charts div[class*="attribution"],
+.tv-lightweight-charts .tv-attribution,
+.tv-lightweight-charts .tv-logo,
+.tv-lightweight-charts .tv-watermark {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide any anchor tags within the chart container */
+.tv-lightweight-charts a {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Ensure our chart takes full space without attribution */
+.tv-lightweight-charts {
+  position: relative !important;
+}
+
+/* Pointer cursor on interactive elements */
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+/* Custom range slider styling */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #9ca3af;
+  cursor: pointer;
+  border: 2px solid #000000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #9ca3af;
+  cursor: pointer;
+  border: 2px solid #000000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-ms-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #9ca3af;
+  cursor: pointer;
+  border: 2px solid #000000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}

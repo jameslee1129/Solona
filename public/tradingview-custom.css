@@ -1,0 +1,16 @@
+:root {
+  --tv-color-toolbar-background: #000000 !important;
+  --tv-color-pane-background: #000000 !important;
+  --tv-color-platform-background: #000000 !important;
+  --tv-color-content-background: #000000 !important;
+}
+
+/* Additional overrides for toolbar elements */
+.tv-header,
+.tv-toolbar,
+[data-role="toolbar"],
+[class*="toolbar"],
+[class*="header"] {
+  background-color: #000000 !important;
+  background: #000000 !important;
+}
